@@ -1,0 +1,15 @@
+<mat-form-field>
+	<mat-select [formControl]="foodForm" placeholder="Favorite food" multiple [(value)]=myselectedFoods>
+		<mat-option *ngFor="let food of allfoods" [value]="food.value">
+			{{food.viewValue}}
+		</mat-option>
+	</mat-select>
+</mat-form-field>
+
+<div>
+  {{ myselectedFoods | json }}
+</div>
+
+<!-- Copyright 2018 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
